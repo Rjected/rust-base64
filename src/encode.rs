@@ -13,9 +13,8 @@ use crate::PAD_BYTE;
 ///
 /// See [Engine::encode].
 #[allow(unused)]
-#[deprecated(since = "0.21.0", note = "Use Engine::encode")]
 #[cfg(any(feature = "alloc", test))]
-pub fn encode<T: AsRef<[u8]>>(input: T) -> String {
+pub fn standard_encode<T: AsRef<[u8]>>(input: T) -> String {
     STANDARD.encode(input)
 }
 
